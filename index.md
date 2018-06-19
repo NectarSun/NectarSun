@@ -1,9 +1,7 @@
-## Releases
-
 Here we will post detailed updates about our latest firmware releases.
 
-### v107
-
+### Release v107
+---
 ### TLDR;
 
 The v107 fixes the re-calibration issue (0W in ‘No Grid’ mode), improves communications reliability between the Wifi module and 2 processors, validates the outgoing data to fix the statistics issue in the app, sends calibration data and firmware version to the server for better monitoring.
