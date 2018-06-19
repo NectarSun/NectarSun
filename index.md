@@ -1,7 +1,6 @@
 ## Release v107
----
 ###### 19 June 2018
-
+---
 #### TLDR;
 The v107 fixes the re-calibration issue (0W in ‘No Grid’ mode), improves communications reliability between the Wifi module and 2 processors, validates the outgoing data to fix the statistics issue in the app, sends calibration data and firmware version to the server for better monitoring.
 
@@ -10,7 +9,7 @@ Also, firmware version of each processor and the Wifi module are now displayed o
 More details below.
 
 
-
+---
 #### BUGS FIXED
 
 ##### Communications
@@ -30,7 +29,7 @@ More details below.
 - Adds valid data checks for calibration data. When calibrating the device, it checks if the calibration data is within the expected range (voltage value:0.001000-0.002000 and current value: 1.800000-2.200000). If values are within the range, Nectarsun saves the new values in the internal memory. If the values are bad (outside the correct range) they values are ignored, and if the device was previously correctly calibrated, values are loaded from memory. If device was not calibrated previously, it displays the ‘Not calibrated’ message, and raises the CALIBRATION_ERROR flag (Error 232). This prevents from random calibration which renders the Nectarsun useless when heating from sun. Fixes the issues that multiple users faced, when calibration was done wrong, or when Nectarsun improperly calibrated itself.
 
 
-
+---
 #### FEATURES ADDED
 
 ##### Communications
@@ -54,7 +53,7 @@ More details below.
 - Increases watchdog timer reset period.
 
 
-
+---
 #### FUTURE UPDATES
 
 - Legionella prevention. Periodically (once a week) heat the boiler to 70C, to prevent Legionella infections.
