@@ -5,8 +5,8 @@
 </div>
 
 <div style="text-align: center;">
-<a href="http://nectarsun.com/ios" style="display: inline-block;margin-left: auto;/* margin-right: auto; */background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg)    no-repeat;width:135px;height:40px;background-size:contain;margin-right: 50px;"></a>
-<a href="http://nectarsun.com/android" style="display:inline-block;margin-left: auto;margin-right: auto;background:url(https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png) no-repeat;width:135px;height:40px;background-size:155px 60px;background-position: -10px -10px;"></a>
+<a href="https://itunes.apple.com/app/nectar-sun/id1286550945?mt=8" style="display: inline-block;margin-left: auto;/* margin-right: auto; */background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg)    no-repeat;width:135px;height:40px;background-size:contain;margin-right: 50px;"></a>
+<a href="https://play.google.com/store/apps/details?id=com.nectarsun.android&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" style="display:inline-block;margin-left: auto;margin-right: auto;background:url(https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png) no-repeat;width:135px;height:40px;background-size:155px 60px;background-position: -10px -10px;"></a>
 </div>
 
 ---
