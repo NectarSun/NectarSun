@@ -1,5 +1,7 @@
 <div style="text-align: center;">
-<img src="http://nectarsun.com/img/nectar-logo-3.svg" alt="Nectarsun" style="margin-bottom: 40px; margin-top: 10px;">
+<a href="http://nectarsun.com">
+  <img src="http://nectarsun.com/img/nectar-logo-3.svg" alt="Nectarsun" style="margin-bottom: 40px; margin-top: 10px;">
+</a>
 </div>
 
 <div style="text-align: center;">
