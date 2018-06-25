@@ -1,8 +1,11 @@
 
----
-##### ![Nectarsun](http://nectarsun.com/img/nectar-logo-3.svg) | [Customer Support](http://nectarsun.com/support.html) | [Facebook](https://www.facebook.com/nectarsun/)
+<div>
 <a href="ios" style="display:inline-block;background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg)    no-repeat;width:135px;height:40px;background-size:contain;margin-right:10px"></a>
 <a href="android" style="display:inline-block;background:url(https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png) no-repeat;width:135px;height:40px;background-size:155px 60px;background-position: -10px -10px"></a>
+</div>
+
+---
+##### ![Nectarsun](http://nectarsun.com/img/nectar-logo-3.svg)
 ---
 ###### 19 June 2018
 ### Release v107
