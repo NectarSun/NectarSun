@@ -1,7 +1,8 @@
 
-<div>
-<a href="ios" style="display:inline-block;background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg)    no-repeat;width:135px;height:40px;background-size:contain;margin-right:10px"></a>
-<a href="android" style="display:inline-block;background:url(https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png) no-repeat;width:135px;height:40px;background-size:155px 60px;background-position: -10px -10px"></a>
+<div style="text-align: center;">
+<a href="www.nectarsun.com" style="display: inline-block; margin-left: auto; background: url(http://nectarsun.com/img/nectar-logo-3.svg) no-repeat; height: 40px; width: auto; background-size: contain; margin-right: 25px;"></a>
+<a href="www.nectarsun.com/ios" style="display: inline-block;margin-left: auto;/* margin-right: auto; */background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg)    no-repeat;width:135px;height:40px;background-size:contain;margin-right: 25px;"></a>
+<a href="www.nectarsun.com/android" style="display:inline-block;margin-left: auto;margin-right: auto;background:url(https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png) no-repeat;width:135px;height:40px;background-size:155px 60px;background-position: -10px -10px;"></a>
 </div>
 
 ---
