@@ -10,6 +10,45 @@
 </div>
 
 ---
+###### 28 June 2018
+### Release v108
+---
+#### TLDR;
+This is a minor update without many changes to the operation of the Nectarsun, compared to the last one.
+
+The v108 fixes some small issues that we identified after the last update, as well as a couple of improvements to increase Nectarsun reliability. We improved the night-time and morning/evening 'Sun' state performance, increased the voltage limit, and improved the screen display for people who experience screen flipping from time to time.
+
+More details below.
+
+
+---
+#### BUGS FIXED
+
+##### Main Board
+- Fixed the early morning/night power display problem, when  the device is working in 'Sun' mode. Some people complained that during the night when Nectarsun was running in 'No Grid' mode, the display said that it was heating from 'Sun', even though it was night time. From our side this was not a bug, as the display showed the relay state, which was correct - relays were in 'Sun' mode, but it was confusing for the user. In v107 we tried to fix this by switching off the 'Sun' relay at night, when the voltage drops below 10V, but this introduced unwanted rapid relay switching at early mornings and late evenings. So now, we don't switch off the 'Sun' relay at night, but instead when the generated power drops below 5W, we display 'Idle' on the screen.
+
+##### Power Board
+- Fixed the MPPT reset threshold. In previous versions our MPPT algorithm would start searching for the MPP from the beginning if the PV power was lesser than 50W and AC PWM duty cycle was greater than 50%. This introduced some unstabilities with low PV power. With v108 we changed this condition from checking for power and PWM duty cycle conditions, to only checking the PV current. Now, the MPPT starts tracking when the PV current becomes greater than 75mA, otherwise, the PWM duty cycle is kept at 10%. This prevents the Nectarsun from interpreting electrical noise in the measurement circuitry as PV power.
+
+
+---
+#### FEATURES ADDED
+
+##### Main Board
+- The screen on the Nectarsun now reinintialises every 10 minutes. This helps in cases where there is a lot of electrical noise in the environment that can affect the screen display. Also, if the screen was disconnected from the Nectarsun, it will reinintialise in 10 minutes after connecting it back, and the user will not have to restart the Nectarsun anymore.
+
+##### Power Board
+- The input voltage limit has been raised to 385V to accommodate the new high-voltage PV panels.
+
+---
+#### FUTURE UPDATES
+- Legionella prevention. Periodically (once a week) heat the boiler to 70C, to prevent Legionella infections.
+- Add a menu option to allow the user to disable Legionella prevention.
+- ‘No comms’ error. Display an error on the screen if the Main Board did not receive a message from ESP or the Power Board after a certain period of time, as this could mean a partial system failure.
+- ‘Resetting device’ screen while ESP restarts after a reset.
+- Faster MPPT algorithm.
+
+---
 ###### 19 June 2018
 ### Release v107
 ---
