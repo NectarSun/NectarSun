@@ -20,24 +20,25 @@ The v108 fixes some small issues that we identified after the last update, as we
 
 More details below.
 
-
+</br>
 #### BUGS FIXED
 
-##### Main Board
+###### Main Board
 - Fixed the early morning/night power display problem, when  the device is working in 'Sun' mode. Some people complained that during the night when Nectarsun was running in 'No Grid' mode, the display said that it was heating from 'Sun', even though it was night time. From our side this was not a bug, as the display showed the relay state, which was correct - relays were in 'Sun' mode, but it was confusing for the user. In v107 we tried to fix this by switching off the 'Sun' relay at night, when the voltage drops below 10V, but this introduced unwanted rapid relay switching at early mornings and late evenings. So now, we don't switch off the 'Sun' relay at night, but instead when the generated power drops below 5W, we display 'Idle' on the screen.
 
-##### Power Board
+###### Power Board
 - Fixed the MPPT reset threshold. In previous versions our MPPT algorithm would start searching for the MPP from the beginning if the PV power was lesser than 50W and AC PWM duty cycle was greater than 50%. This introduced some unstabilities with low PV power. With v108 we changed this condition from checking for power and PWM duty cycle conditions, to only checking the PV current. Now, the MPPT starts tracking when the PV current becomes greater than 75mA, otherwise, the PWM duty cycle is kept at 10%. This prevents the Nectarsun from interpreting electrical noise in the measurement circuitry as PV power.
 
-
+</br>
 #### FEATURES ADDED
 
-##### Main Board
+###### Main Board
 - The screen on the Nectarsun now reinintialises every 10 minutes. This helps in cases where there is a lot of electrical noise in the environment that can affect the screen display. Also, if the screen was disconnected from the Nectarsun, it will reinintialise in 10 minutes after connecting it back, and the user will not have to restart the Nectarsun anymore.
 
-##### Power Board
+###### Power Board
 - The input voltage limit has been raised to 385V to accommodate the new high-voltage PV panels.
 
+</br>
 #### FUTURE UPDATES
 - Legionella prevention. Periodically (once a week) heat the boiler to 70C, to prevent Legionella infections.
 - Add a menu option to allow the user to disable Legionella prevention.
@@ -45,8 +46,8 @@ More details below.
 - ‘Resetting device’ screen while ESP restarts after a reset.
 - Faster MPPT algorithm.
 
-
-
+</br>
+</br>
 ###### 19 June 2018
 ### Release v107
 ---
@@ -57,51 +58,49 @@ Also, firmware version of each processor and the Wifi module are now displayed o
 
 More details below.
 
-
+</br>
 #### BUGS FIXED
 
-##### Communications
+###### Communications
 - Changed the values that represent ‘true’ and ‘false’ from 0x01 and 0x00, to 0xAC and 0xFA respectively. It increases message reliability, and reduces the chances of interpreting the wrong value when the message becomes corrupt.
 
-##### ESP (Wifi module)
+###### ESP (Wifi module)
 - Fixes the HTTPS client library. Does not use the readStringUntil(‘\n’) function to read the response from server, instead uses the response length to read the correct number of chars from server. Previously, this issue caused an error while trying to configure the device with the app.
 - Checks outgoing data and does not send a message to the server, if all is zero. Fixes the large ‘Sun kWh’ stats in the app.
 - Adds a check when loading data from flash, if the correct value for configuration is not found, we stop reading data from memory and fallback to default settings. Previously ESP would hang and reset while trying to read the URL from flash.
 - Reduces SNTP call timeout from 20s to 5s. Increases device responsiveness in case there is a problem with the SNTP server.
 
-##### Main Board
+###### Main Board
 - Turns off the Sun relay at night. Previously it showed ‘Heating from Sun’ on the device screen at night. Now, the device shows ‘Idle’ at night, and when the PV voltage drops below 10V (basically when it becomes dark, or PV is disconnected).
 - Fixes the ‘Calibrate’ screen bug. The device calibrated when either ‘Yes’ or ‘No’ was selected. Now it only happens when ‘Yes’ is selected. Prevents from accidental re-calibration.
 
-##### Power Board
+###### Power Board
 - Adds valid data checks for calibration data. When calibrating the device, it checks if the calibration data is within the expected range (voltage value:0.001000-0.002000 and current value: 1.800000-2.200000). If values are within the range, Nectarsun saves the new values in the internal memory. If the values are bad (outside the correct range) they values are ignored, and if the device was previously correctly calibrated, values are loaded from memory. If device was not calibrated previously, it displays the ‘Not calibrated’ message, and raises the CALIBRATION_ERROR flag (Error 232). This prevents from random calibration which renders the Nectarsun useless when heating from sun. Fixes the issues that multiple users faced, when calibration was done wrong, or when Nectarsun improperly calibrated itself.
 
-
+</br>
 #### FEATURES ADDED
 
-##### Communications
-
+###### Communications
 - Added checksums to each message to increase message reliability.
 - Expanded the comms protocol to include firmware version for each processor.
 
-##### ESP (Wifi module)
+###### ESP (Wifi module)
 - Sends ESP firmware version to the Main Board.
 - Sends Main Board firmware version, as well as calibration data to the server.
 - Adds support for legacy comms where only the ESP module receives an over-the-air update.
 
-##### Main Board
+###### Main Board
 - Displays non-critical errors on the ‘Active Status’ screen in the bottom right corner. If a Power Board error occurs (over-current, over-voltage, overheat, or similar) that prevents the Power Board from functioning normally, a warning sign (triangle with an exclamation sign) is displayed in the bottom right corner with the error number underneath.  - This will inform the user if the device is heating from ‘Sun’, ‘Idle’, or in safe mode (waiting for Power Board to recover). This does not have any effect if the device is in ‘Grid’ mode.
 - Updates the loading screen. Device loads while valid messages are received from the ESP module and the Power Board. Firmware versions of each processor are displayed on the loading screen to increase quality and prevent from shipping old firmware or modules without firmware. Installed firmware now displayed in the engineering menu as well.
 - Both relays switch off while the device is calibrating.
 - Increases watchdog timer reset period.
 
-##### Power Board
+###### Power Board
 - Increases current limit from 9A to 10A. Allows users with with high-amperage PV panels to use the Nectarsun.
 - Increases watchdog timer reset period.
 
-
+</br>
 #### FUTURE UPDATES
-
 - Legionella prevention. Periodically (once a week) heat the boiler to 70C, to prevent Legionella infections.
 - Add a menu option to allow the user to disable Legionella prevention.
 - ‘No comms’ error. Display an error on the screen if the Main Board did not receive a message from ESP or the Power Board after a certain period of time, as this could mean a partial system failure.
