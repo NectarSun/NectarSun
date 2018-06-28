@@ -16,7 +16,7 @@
 #### TLDR;
 This is a minor update without many changes to the operation of the Nectarsun, compared to the last one.
 
-The v108 fixes some small issues that we identified after the last update, as well as a couple of improvements to increase Nectarsun reliability. We improved the night-time and morning/evening 'Sun' state performance, increased the voltage limit, and improved the screen display for people who experience screen flipping from time to time.
+The v108 fixes some small issues that we identified after the last update, as well as a couple of improvements to increase Nectarsun reliability. We improved the night-time and morning/evening 'Sun' state performance, increased the voltage limit, and improved the screen display for people who experience screen flipping from time to time. Also, increases safety in engineering menu.
 
 More details below.
 
@@ -37,6 +37,7 @@ More details below.
 
 ###### Power Board
 - The input voltage limit has been raised to 385V to accommodate the new high-voltage PV panels.
+- When the user enters the engineering menu, Nectarsun does not automatically switch the relays. Now the user has to manually go to the 'Select Mode' menu option where after selection has been made, the Nectarsun switches relays. This has been implemented to protect hardware (e.g. metering hardware) which might be connected to the Nectarsun output while it is in engineering menu.
 
 <br />
 #### FUTURE UPDATES
