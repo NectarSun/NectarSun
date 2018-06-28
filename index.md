@@ -20,7 +20,7 @@ The v108 fixes some small issues that we identified after the last update, as we
 
 More details below.
 
-</br>
+<br />
 #### BUGS FIXED
 
 ###### Main Board
@@ -29,7 +29,7 @@ More details below.
 ###### Power Board
 - Fixed the MPPT reset threshold. In previous versions our MPPT algorithm would start searching for the MPP from the beginning if the PV power was lesser than 50W and AC PWM duty cycle was greater than 50%. This introduced some unstabilities with low PV power. With v108 we changed this condition from checking for power and PWM duty cycle conditions, to only checking the PV current. Now, the MPPT starts tracking when the PV current becomes greater than 75mA, otherwise, the PWM duty cycle is kept at 10%. This prevents the Nectarsun from interpreting electrical noise in the measurement circuitry as PV power.
 
-</br>
+<br />
 #### FEATURES ADDED
 
 ###### Main Board
@@ -38,7 +38,7 @@ More details below.
 ###### Power Board
 - The input voltage limit has been raised to 385V to accommodate the new high-voltage PV panels.
 
-</br>
+<br />
 #### FUTURE UPDATES
 - Legionella prevention. Periodically (once a week) heat the boiler to 70C, to prevent Legionella infections.
 - Add a menu option to allow the user to disable Legionella prevention.
@@ -46,8 +46,8 @@ More details below.
 - ‘Resetting device’ screen while ESP restarts after a reset.
 - Faster MPPT algorithm.
 
-</br>
-</br>
+<br />
+<br />
 ###### 19 June 2018
 ### Release v107
 ---
@@ -58,7 +58,7 @@ Also, firmware version of each processor and the Wifi module are now displayed o
 
 More details below.
 
-</br>
+<br />
 #### BUGS FIXED
 
 ###### Communications
@@ -77,7 +77,7 @@ More details below.
 ###### Power Board
 - Adds valid data checks for calibration data. When calibrating the device, it checks if the calibration data is within the expected range (voltage value:0.001000-0.002000 and current value: 1.800000-2.200000). If values are within the range, Nectarsun saves the new values in the internal memory. If the values are bad (outside the correct range) they values are ignored, and if the device was previously correctly calibrated, values are loaded from memory. If device was not calibrated previously, it displays the ‘Not calibrated’ message, and raises the CALIBRATION_ERROR flag (Error 232). This prevents from random calibration which renders the Nectarsun useless when heating from sun. Fixes the issues that multiple users faced, when calibration was done wrong, or when Nectarsun improperly calibrated itself.
 
-</br>
+<br />
 #### FEATURES ADDED
 
 ###### Communications
@@ -99,7 +99,7 @@ More details below.
 - Increases current limit from 9A to 10A. Allows users with with high-amperage PV panels to use the Nectarsun.
 - Increases watchdog timer reset period.
 
-</br>
+<br />
 #### FUTURE UPDATES
 - Legionella prevention. Periodically (once a week) heat the boiler to 70C, to prevent Legionella infections.
 - Add a menu option to allow the user to disable Legionella prevention.
