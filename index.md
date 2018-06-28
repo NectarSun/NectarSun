@@ -37,7 +37,7 @@ More details below.
 
 ###### Power Board
 - The input voltage limit has been raised to 385V to accommodate the new high-voltage PV panels.
-- When the user enters the engineering menu, Nectarsun does not automatically switch the relays. Now the user has to manually go to the 'Select Mode' menu option where after selection has been made, the Nectarsun switches relays. This has been implemented to protect hardware (e.g. metering hardware) which might be connected to the Nectarsun output while it is in engineering menu.
+- When the user enters the engineering menu, Nectarsun does not automatically switch the relays. Now the user has to manually go to the 'Select Mode' menu option where after the selection has been made, the Nectarsun switches relays. This has been implemented to protect the hardware (e.g. metering hardware) that might be connected to the Nectarsun output while it is in the engineering menu.
 
 <br />
 #### FUTURE UPDATES
