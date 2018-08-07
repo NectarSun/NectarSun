@@ -1,8 +1,7 @@
+![Nectarsun Logo][nectarsun-logo]
 <div style="text-align: center;">
-<a href="http://nectarsun.com">
 
-  ![Nectarsun Logo][nectarsun-logo]
-</a>
+![Nectarsun Logo][nectarsun-logo]
 </div>
 
 <div style="text-align: center;">
