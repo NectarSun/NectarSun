@@ -1,6 +1,7 @@
 <div style="text-align: center;">
 <a href="http://nectarsun.com">
-  <img src="http://nectarsun.com/img/nectar-logo-3.svg" alt="Nectarsun" style="margin-bottom: 40px; margin-top: 10px;">
+
+  ![Nectarsun Logo][nectarsun-logo]
 </a>
 </div>
 
@@ -107,3 +108,5 @@ More details below.
 - ‘No comms’ error. Display an error on the screen if the Main Board did not receive a message from ESP or the Power Board after a certain period of time, as this could mean a partial system failure.
 - ‘Resetting device’ screen while ESP restarts after a reset.
 - Periodically reinitialise the screen to prevent it from flipping upside-down, etc.
+
+[nectarsun-logo]: https://github.com/NectarSun/nectarsun.github.io/raw/master/img/logo.png "Top cover screws"
