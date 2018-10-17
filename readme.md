@@ -19,7 +19,6 @@ Additionally, we added some improvements in our Engineering menu.
 
 More details on each one of these changes below.
 
-<br />
 #### BUGS FIXED
 
 ###### Main Board
@@ -30,7 +29,6 @@ More details on each one of these changes below.
 ###### Power Board
 - Fixes the grid energy meter synchronization between the Main board and the Power board. We discovered a problem that when the Power board unexpectedly restarted, it loaded the last grid energy meter value from its internal memory, and then sent this value to the Main board. Now if such a thing happens, we simply compare the value that was loaded from the memory, with the value that came from the Main board, and we use the bigger one. This way, the grid energy meter will never reset to an old value.
 
-<br />
 #### FEATURES ADDED
 
 ###### Main Board
@@ -39,7 +37,6 @@ More details on each one of these changes below.
 - Increases the relay switching times. Relays will now take a longer time to switch from Grid to Sun, but by increasing the delays between switching, we ensure that all the currents and voltages on the relay contacts die down and stabilise. Improves operational reliability.
 - Adds a new mode in the Engineering Menu - besides the usual ones: 'Auto', 'Boost', 'No Grid' and 'Away', we added a new one - 'All Off'. It is only accessible through the Engineering Menu, so regular users won't see it. It is for device testing, so that the device does not switch to grid or sun when turned on, therefore preventing from accidentally damaging the equipment that might be connected to the output of the Nectarsun. 
 
-<br />
 #### FUTURE UPDATES
 - Legionella prevention. Periodically (once a week) heat the boiler to 70C, to prevent Legionella infections.
 - Add a menu option to allow the user to disable Legionella prevention.
